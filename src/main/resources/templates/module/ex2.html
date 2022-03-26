@@ -26,5 +26,9 @@
 <ul>
     <li th:each="dto, state:${list}" th:text="${dto.bno %5==0}?${dto.bno}:${dto.first}"></li>
 </ul>
+<h1>page95</h1>
+<ul>
+    <li th:each="dto, state:${list}" th:class="${dto.bno %5==0}?'target'" th:text="${dto}"></li>
+</ul>
 </body>
 </html>
