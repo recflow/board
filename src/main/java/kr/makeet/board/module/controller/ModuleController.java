@@ -22,17 +22,16 @@ public class ModuleController {
         log.info("ex1....");
     }
 
-    @GetMapping("/ex2")
+    @GetMapping({"/ex2", "/exLink"})
     public void exModel1(Model model) {
-        List<ModuleDTO> list = IntStream.rangeClosed(1, 20).asLongStream().mapToObj(i -> {
-            ModuleDTO dto = ModuleDTO.builder()
-                .bno(i)
-                .first("First..." + i)
-                .last("Last..." + i)
-                .regTime(LocalDateTime.now())
-                .build();
-            return dto;
-        }).collect(Collectors.toList());
+        List<ModuleDTO> list = IntStream.rangeClosed(1, 20).asLongStream().mapToObj(i ->
+                ModuleDTO.builder()
+                        .bno(i)
+                        .first("First..." + i)
+                        .last("Last..." + i)
+                        .regTime(LocalDateTime.now())
+                        .build())
+                .collect(Collectors.toList());
         model.addAttribute("list", list);
     }
     /* * * * * * * *
