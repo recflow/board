@@ -7,7 +7,7 @@
 <body>
 <ul>
     <li th:each="dto: ${list}">
-        [[${#numbers.formatInteger(dto.bno, 5)}]]
+        [[${dto.bno}]]---[[${#temporals.format(dto.regTime, 'yyyy/mm/dd')}]]
     </li>
 </ul>
 </body>
