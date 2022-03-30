@@ -7,7 +7,7 @@
 <body>
 <ul>
     <li th:each="dto: ${list}">
-        <a th:href="@{/module/exView/{bno}(bno=${dto.bno})}">[[${dto}]]</a>
+        [[${#numbers.formatInteger(dto.bno, 5)}]]
     </li>
 </ul>
 </body>
