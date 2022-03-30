@@ -29,7 +29,6 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok:1.18.22'
     providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat:2.6.4'
     testImplementation 'org.springframework.boot:spring-boot-starter-test:2.6.4'
-    implementation('org.thymeleaf:thymeleaf:3.0.12.RELEASE')
 }
 
 tasks.named('test') {
